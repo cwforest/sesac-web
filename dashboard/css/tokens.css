@@ -1,0 +1,72 @@
+:root {
+  /* Surface */
+  --bg-base: #0b0e14;
+  --bg-surface: #121722;
+  --bg-elevated: #1a2130;
+  --bg-hover: #222b3c;
+  --bg-inset: #0e1219;
+
+  /* Border */
+  --border-subtle: #1e2634;
+  --border-default: #2a3446;
+  --border-strong: #3b4859;
+
+  /* Text */
+  --text-primary: #e6edf6;
+  --text-secondary: #9aa7b8;
+  --text-tertiary: #6b7889;
+  --text-disabled: #4a5566;
+
+  /* Accent */
+  --accent: #4c9aff;
+  --accent-hover: #6bb0ff;
+  --accent-muted: rgba(76, 154, 255, 0.14);
+
+  /* Semantic (등락: 한국 금융 관행 — 상승=적색, 하락=청색) */
+  --pos: #ff5c6c;
+  --pos-bg: rgba(255, 92, 108, 0.12);
+  --neg: #3ea6ff;
+  --neg-bg: rgba(62, 166, 255, 0.12);
+  --neutral: #8a94a6;
+  --warn: #f2b441;
+
+  /* Sequential ramp (choropleth) */
+  --seq-1: #16324a;
+  --seq-2: #1d4f70;
+  --seq-3: #276f95;
+  --seq-4: #3691b5;
+  --seq-5: #58b6ce;
+  --seq-6: #97dce4;
+  --seq-null: #2a3140;
+
+  /* Categorical */
+  --cat-1: #4c9aff;
+  --cat-2: #f2b441;
+  --cat-3: #4ed8a0;
+  --cat-4: #e86fc4;
+  --cat-5: #a78bfa;
+  --cat-6: #ff8a5c;
+  --cat-7: #5ad1e8;
+  --cat-8: #b8c36e;
+
+  /* Chart chrome */
+  --grid-line: #1e2634;
+  --axis-line: #2a3446;
+  --axis-label: #6b7889;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-drawer: -8px 0 32px rgba(0, 0, 0, 0.5);
+
+  /* Radius / spacing */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+}
