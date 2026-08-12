@@ -4,132 +4,252 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>임채원</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <style>
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
+    font-weight: 45 920;
+  }
+
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #16181d;
+    --text-muted: #5b6270;
+    --border: #e6e8ec;
+    --accent: #2f6feb;
+    --accent-soft: #eaf1ff;
+    --radius: 16px;
+    --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06);
+  }
+
+  * { box-sizing: border-box; }
+
   body {
-    font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-    max-width: 700px;
-    margin: 60px auto;
-    padding: 0 20px;
+    font-family: 'Pretendard', -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 72px 20px 100px;
     line-height: 1.7;
-    color: #222;
+    -webkit-font-smoothing: antialiased;
   }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 44px 40px;
+    margin-bottom: 28px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+    letter-spacing: 0.01em;
+  }
+
   h1 {
-    font-size: 2.2em;
-    margin-bottom: 0.3em;
+    font-size: 2.1em;
+    font-weight: 700;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
   }
+
   p.intro {
-    font-size: 1.05em;
-    color: #444;
-    margin-bottom: 2em;
+    font-size: 1.02em;
+    color: var(--text-muted);
+    margin: 0;
   }
+
+  section.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 1.35em;
+    font-weight: 700;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  p {
+    color: var(--text-muted);
+    margin: 0 0 20px;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 0.95em;
   }
+
   th, td {
-    border: 1px solid #ccc;
-    padding: 10px 14px;
+    padding: 13px 16px;
     text-align: left;
+    border-bottom: 1px solid var(--border);
   }
+
   th {
-    background: #f4f4f4;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
-  h2 {
-    font-size: 1.6em;
-    margin-top: 2.5em;
-    margin-bottom: 0.5em;
+
+  td:first-child {
+    color: var(--text);
+    font-weight: 600;
+    white-space: nowrap;
+    width: 160px;
   }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
   figure {
-    margin: 1.5em 0;
+    margin: 24px 0 0;
   }
+
   figure img {
+    display: block;
     max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
   }
+
   figcaption {
-    margin-top: 0.5em;
-    font-size: 0.9em;
-    color: #666;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: var(--text-muted);
     text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 40px 14px 80px; }
+    .hero, section.card { padding: 28px 24px; }
+    h1 { font-size: 1.7em; }
+    td:first-child { width: auto; }
   }
 </style>
 </head>
 <body>
 
-<h1>임채원</h1>
+<main>
 
-<p class="intro">
-데이터 기반 정량분석을 통해 정책과 사업의 방향을 설득력 있게 제시하는 일을 해왔습니다.
-공공기관·지방자치단체 연구용역에서 설문 설계부터 통계분석, 보고서 작성까지 담당했고,
-Business Analytics 석사과정에서 회귀분석, 인과추론, 머신러닝 등 정량분석 역량을 더했습니다.
-새로운 데이터와 기술을 빠르게 학습해 실무에 적용하는 것을 좋아합니다.
-</p>
+  <div class="hero">
+    <span class="badge">Data Analyst</span>
+    <h1>임채원</h1>
+    <p class="intro">
+      데이터 기반 정량분석을 통해 정책과 사업의 방향을 설득력 있게 제시하는 일을 해왔습니다.
+      공공기관·지방자치단체 연구용역에서 설문 설계부터 통계분석, 보고서 작성까지 담당했고,
+      Business Analytics 석사과정에서 회귀분석, 인과추론, 머신러닝 등 정량분석 역량을 더했습니다.
+      새로운 데이터와 기술을 빠르게 학습해 실무에 적용하는 것을 좋아합니다.
+    </p>
+  </div>
 
-<table>
-  <tr>
-    <th>항목</th>
-    <th>설명</th>
-  </tr>
-  <tr>
-    <td>주요 경력</td>
-    <td>공공기관·지방자치단체 대상 학술연구용역 수행 (설문 설계, 실사, 통계분석, 보고서 작성)</td>
-  </tr>
-  <tr>
-    <td>학력</td>
-    <td>고려대학교 일반대학원 경영학과(Business Analytics) 석사</td>
-  </tr>
-  <tr>
-    <td>관심 분야</td>
-    <td>Python·R 기반 데이터 분석, 인과추론, 데이터 기반 정책·사업 성과분석</td>
-  </tr>
-</table>
+  <section class="card">
+    <h2>프로필</h2>
+    <table>
+      <tr>
+        <th>항목</th>
+        <th>설명</th>
+      </tr>
+      <tr>
+        <td>주요 경력</td>
+        <td>공공기관·지방자치단체 대상 학술연구용역 수행 (설문 설계, 실사, 통계분석, 보고서 작성)</td>
+      </tr>
+      <tr>
+        <td>학력</td>
+        <td>고려대학교 일반대학원 경영학과(Business Analytics) 석사</td>
+      </tr>
+      <tr>
+        <td>관심 분야</td>
+        <td>Python·R 기반 데이터 분석, 인과추론, 데이터 기반 정책·사업 성과분석</td>
+      </tr>
+    </table>
+  </section>
 
-<h2>[서울 지역(구)별] 아파트 실거래 살펴보기</h2>
+  <section class="card">
+    <h2>[서울 지역(구)별] 아파트 실거래 살펴보기</h2>
 
-<p>
-2025년 7월부터 2026년 6월까지 서울시 아파트 매매 실거래가(약 7만 2천 건)를 자치구 단위로 집계했습니다.
-도봉구의 평균 물건금액은 약 5.7억 원으로, 서울 평균(약 11.9억 원)의 절반 수준이며 25개 자치구 중 25위(최하위)를 기록했습니다.
-1위인 강남구(약 27.5억 원)와는 약 4.8배 차이가 나며, 상대적으로 저렴한 자치구인 노원구·금천구·중랑구보다도 낮은 수준입니다.
-월별 추이를 보면 2025년 8월에 저점(약 5.2억 원)을 찍은 뒤 등락은 있었지만 2026년 6월 기준 5.87억 원까지 완만하게 상승하는 흐름을 보였습니다.
-</p>
+    <p>
+      2025년 7월부터 2026년 6월까지 서울시 아파트 매매 실거래가(약 7만 2천 건)를 자치구 단위로 집계했습니다.
+      도봉구의 평균 물건금액은 약 5.7억 원으로, 서울 평균(약 11.9억 원)의 절반 수준이며 25개 자치구 중 25위(최하위)를 기록했습니다.
+      1위인 강남구(약 27.5억 원)와는 약 4.8배 차이가 나며, 상대적으로 저렴한 자치구인 노원구·금천구·중랑구보다도 낮은 수준입니다.
+      월별 추이를 보면 2025년 8월에 저점(약 5.2억 원)을 찍은 뒤 등락은 있었지만 2026년 6월 기준 5.87억 원까지 완만하게 상승하는 흐름을 보였습니다.
+    </p>
 
-<table>
-  <tr>
-    <th>항목</th>
-    <th>결과</th>
-  </tr>
-  <tr>
-    <td>분석 대상</td>
-    <td>서울시 아파트 매매 실거래 (2025-07 ~ 2026-06, 72,459건)</td>
-  </tr>
-  <tr>
-    <td>도봉구 평균 물건금액</td>
-    <td>약 5.7억 원</td>
-  </tr>
-  <tr>
-    <td>서울 전체 평균 물건금액</td>
-    <td>약 11.9억 원</td>
-  </tr>
-  <tr>
-    <td>도봉구 순위</td>
-    <td>25개 자치구 중 25위 (최하위)</td>
-  </tr>
-  <tr>
-    <td>최고가 자치구</td>
-    <td>강남구 (약 27.5억 원)</td>
-  </tr>
-  <tr>
-    <td>도봉구 월별 추이</td>
-    <td>2025-08 저점(약 5.2억 원) → 2026-06 약 5.87억 원으로 상승</td>
-  </tr>
-</table>
+    <table>
+      <tr>
+        <th>항목</th>
+        <th>결과</th>
+      </tr>
+      <tr>
+        <td>분석 대상</td>
+        <td>서울시 아파트 매매 실거래 (2025-07 ~ 2026-06, 72,459건)</td>
+      </tr>
+      <tr>
+        <td>도봉구 평균 물건금액</td>
+        <td>약 5.7억 원</td>
+      </tr>
+      <tr>
+        <td>서울 전체 평균 물건금액</td>
+        <td>약 11.9억 원</td>
+      </tr>
+      <tr>
+        <td>도봉구 순위</td>
+        <td>25개 자치구 중 25위 (최하위)</td>
+      </tr>
+      <tr>
+        <td>최고가 자치구</td>
+        <td>강남구 (약 27.5억 원)</td>
+      </tr>
+      <tr>
+        <td>도봉구 월별 추이</td>
+        <td>2025-08 저점(약 5.2억 원) → 2026-06 약 5.87억 원으로 상승</td>
+      </tr>
+    </table>
 
-<figure>
-  <img src="도봉구_평균물건금액_시계열.png" alt="도봉구 월별 평균 물건금액 추이 그래프">
-  <figcaption>도봉구 월별 평균 물건금액 추이 (2025-07 ~ 2026-06)</figcaption>
-</figure>
+    <figure>
+      <img src="도봉구_평균물건금액_시계열.png" alt="도봉구 월별 평균 물건금액 추이 그래프">
+      <figcaption>도봉구 월별 평균 물건금액 추이 (2025-07 ~ 2026-06)</figcaption>
+    </figure>
+  </section>
+
+</main>
 
 </body>
 </html>
